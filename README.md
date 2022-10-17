@@ -7,8 +7,8 @@
 
 - Web Development(Front & Back)
     - [Flask Code](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/app.py)
-    - [Index Page.html](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/templates/index.html)
-    - [About Page.html](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/templates/about.html)
+    - [Index.html](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/templates/index.html)
+    - [About.html](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/templates/about.html)
     - [Template.css](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/static/css/templatemo-style.css)
 
 - Presentation
