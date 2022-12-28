@@ -13,7 +13,6 @@
 
 - Presentation
     - [Web Structure](https://github.com/Yedam101/Project/blob/master/Art_Project/Presentation/Web_Structure.pdf)
-    - [Final PPT](https://github.com/Yedam101/Project/blob/master/Art_Project/Presentation/Art_Project_PPT.pdf)
 
 <br>
 
