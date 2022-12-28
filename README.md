@@ -1,4 +1,4 @@
-# Project
+# Art Project
 <br>
 
 ## Art Project
