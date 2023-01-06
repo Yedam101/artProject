@@ -6,6 +6,30 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+#list {
+    width: 100;
+
+}
+body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+  }
+body::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("../img/back1.jpg");
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.27;
+  }
+
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -210,13 +234,13 @@ a:hover { color:#666666; }
 }
 
 
-.tm-mt-60 { margin-top: 60px; }
+.tm-mt-60 { margin-top: 10px; }
 .tm-mb-50 { margin-bottom: 50px; }
 .tm-mb-74 { margin-bottom: 74px; }
 .tm-mb-90 { margin-bottom: 90px; }
-.tm-text-primary { color: #666666; }
+.tm-text-primary { color: #000000; }
 .tm-text-secondary { color: #CC6699; }
-a.tm-text-primary:hover { color:#666666; }
+a.tm-text-primary:hover { color:#000000; }
 .tm-bg-gray { background-color: #EEEEEE; }
 .tm-input-paging {
     width: 40px;
@@ -259,7 +283,7 @@ a.tm-text-primary:hover { color:#666666; }
     width: 720px;
     border-radius: 0;
     padding: 12px 15px;
-    color: #666666;
+    color: #ffffff;
     border: none;
 }
 
@@ -269,16 +293,16 @@ a.tm-text-primary:hover { color:#666666; }
 }
 
 .tm-search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #666666;
+    color: #ffffff;
     opacity: 1; /* Firefox */
 }
   
 .tm-search-input::-ms-input-placeholder { /* Microsoft Edge */
-    color: #666666;
+    color: #ffffff;
 }
 
 .tm-search-btn {
-    color: white;
+    color: rgb(253, 247, 247);
     background-color: #666666;
     border: none;
     width: 50px;
@@ -492,7 +516,11 @@ figure.effect-ming:hover img { opacity: 0.4; }
 
 .tm-video-details {
     height: 100%;
-    padding: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 /* About */
