@@ -79,8 +79,7 @@ n_classes = artists_top.shape[0] # 종속 변수의 클래스 수
 
 # 학습 데이터의 다양성을 늘리기 위해 데이터 증강(Data augmentation) 수행
 
-# 먼저 ImageDataGenerator 객체 생성. 
-#과정: ImageDataGenerator가 원본 데이터 소스 즉, jpg 나 jpeg와 같은 이미지 파일들을 Numpy Array 형태로 가져온 후 사용자가 설정한 여러가지 증강 기법을 적용할 준비를 함. 이 단계를 수행함으로써 ImageDataGenerator 객체가 생성됨
+# 먼저 ImageDataGenerator 객체 생성. ImageDataGenerator가 원본 데이터 소스 즉, jpg 나 jpeg와 같은 이미지 파일들을 Numpy Array 형태로 가져온 후 사용자가 설정한 여러가지 증강 기법을 적용할 준비를 함. 이 단계를 수행함으로써 ImageDataGenerator 객체가 생성됨
 train_datagen = ImageDataGenerator(validation_split=0.2,
                                    rescale=1./255.,
                                    #rotation_range=45,
