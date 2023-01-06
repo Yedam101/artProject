@@ -28,7 +28,7 @@ from numpy.random import seed
 seed(1)
 tf.random.set_seed(1)
 
-# ## Basic global variables
+### Basic global variables
 
 artists = pd.read_csv('./root/artists.csv')
 artists = artists.sort_values(by=['paintings'], ascending=False)
