@@ -3,7 +3,7 @@
 
 ## Art Project
 - Deep Learning
-    - [Deep Learning Model Code](https://github.com/Yedam101/artProject/blob/master/Art_Project/Deep_Learning/mobilenet_%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0.py)
+    - [Deep Learning Model Code Review](https://github.com/Yedam101/artProject/blob/master/Art_Project/Deep_Learning/mobilenet_%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0.py)
 
 - Web Development(Front & Back)
     - [Flask Code](https://github.com/Yedam101/Project/blob/master/Art_Project/Web/app.py)

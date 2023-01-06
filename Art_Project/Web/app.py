@@ -2,9 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import json
 import os
-from tqdm import tqdm, tqdm_notebook
 import random
 
 import imageio
@@ -22,11 +20,12 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import io
 import base64
-from markupsafe import Markup
 
 from numpy.random import seed
 seed(1)
 tf.random.set_seed(1)
+
+
 
 ### Basic global variables
 
@@ -48,22 +47,20 @@ X = base_model.output
 X = Flatten()(X)
 
 X = Dense(512, kernel_initializer='he_uniform')(X)
-#X = Dropout(0.5)(X)
 X = BatchNormalization()(X)
 X = Activation('relu')(X)
 
 X = Dense(16, kernel_initializer='he_uniform')(X)
-#X = Dropout(0.5)(X)
 X = BatchNormalization()(X)
 X = Activation('relu')(X)
 
 output = Dense(n_classes, activation='softmax')(X)
 
 PredictionModel = Model(inputs=base_model.input, outputs=output)
-PredictionModel.load_weights('./root/model_weights.hdf5')
+PredictionModel.load_weights('./root/model_weights.hdf5') # 미리 저장한 모델 가중치 불러오기
 
-# ## Deep learning prediction model
 
+### Deep learning prediction model
 
 def ArtistPrediction(url):
     web_image = imageio.imread(url)
@@ -95,22 +92,26 @@ def ArtistPrediction(url):
         ans_prob.append(add)
 
     return answer_labels, prediction_prob_list, ans_prob
+    
+    
+    
+# flask
 
 
 from flask import Flask
 from flask import render_template
 from flask import request
-from flask_cors import CORS
+from flask_cors import CORS # CORS는 자바스크립트를 사용한 api 등의 리소스 호출시 동일 출처(같은 호스트네임)가 아니더라도 정상적으로 사용 가능하도록 도와주는 방법
 
 def create_app():
     app = Flask(__name__)
     CORS(app)
 
-    @app.route("/", methods=["GET"])
+    @app.route("/", methods=["GET"]) # 루트 경로로 들어올 시 index.html 렌더링
     def index():
         return render_template('index.html')
 
-    @app.route("/model", methods=["GET"])
+    @app.route("/model", methods=["GET"]) # model 주소로 접근하면 입력된 url을 넘겨서 모델로 예측하고 예측 값을 그래프와 함께 return 이 때 about.html 페이지로 렌더링 
     def model():
         url = request.args.get('url')
         answer_labels, prediction_prob_list, ans_prob = ArtistPrediction(url)
@@ -119,7 +120,7 @@ def create_app():
         artist_name = answer_labels[0]
 
         # Figure 1. Show original url figure
-        s = io.BytesIO()
+        s = io.BytesIO() # 바이트 배열을 이진 파일로 다룰 수 있게 해주는 클래스
 
         plt.imshow(imageio.imread(url))
         plt.axis('off')
@@ -151,4 +152,7 @@ def create_app():
         
 
     return app
+
+
+
 
