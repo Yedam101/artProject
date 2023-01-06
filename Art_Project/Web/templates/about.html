@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yd Art Project</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/templatemo-style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-<!--
-    
-TemplateMo 556 Catalog-Z
-
-https://templatemo.com/tm-556-catalog-z
-
--->
+    <title></title>
+    <!--<link rel="stylesheet" href={{ url_for('static', filename='css/bootstrap.min.css') }}>-->
+    <link rel="stylesheet" href={{ url_for('static', filename='fontawesome/css/all.min.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/templatemo-style.css') }}>
+    <!-- TemplateMo 556 Catalog-Z https://templatemo.com/tm-556-catalog-z -->
 </head>
+
 <body>
     <!-- Page Loader -->
     <div id="loader-wrapper">
@@ -24,44 +19,41 @@ https://templatemo.com/tm-556-catalog-z
         <div class="loader-section section-right"></div>
 
     </div>
+    <!--<nav class="navbar bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+          </a>
+        </div>
+    </nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://www.waterclean101.shop/">
+            <a class="navbar-brand" href="index.html">
                 <div class="logo-image" style="align-items:center; display: flex; justify-content:center;">
-                    <img src='../static/img/home.png' width="25" height="25">
+                    <img src={{ url_for('static', filename='img/home.jpg') }} width="25" height="25">
                 </div>
             </a>
         </div>
     </nav>
 
     <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
-    data-image-src="../static/img/hero.jpg"></div>
+        data-image-src={{ url_for('static', filename='img/hero.jpg') }}></div>
 
     <div class="container text-center">
         <div class="row">
             <h2 class="col-2 tm-text-primary"></h2>
-            <div style="text-align:center">
-                <br><br>
-                <p><h2><span class="tm-bg-gray tm-video-details" style="
-                    height: 40px;"><strong class="tm-text-primary">Prediction Result</strong></h2></p>
+            <div class="col-8 tm-text-primary">
+                <h2>Prediction Result</h2>
                 <br>
-                <br>
-            </div>
-            <div><h4><strong>	
-                &#128125;   {{ artist_name }}	
-                &#128125;</strong></h4></div>
-            <br><br><br>
-            <div>
-                <p><h4><strong style="color: #009999;">Your Input Image</strong></h4><br>
+                <p>입력된 이미지<br>
                 <div class ="row tm-mb-60 tm-galle ry d-flex justify-content-center">
                     <div class="col-lg-12 col-md-12 tm-galle ry d-flex justify-content-center">
                     {{ Figure1 }}<br>   
                     </div>
                 </div>
                 </p>
-                <br>
                 <p>
-                    <h4><strong style="color: #009999;">Results Visualization</strong></h4><br><br>
+                    예측 결과<br>
                 <div class = "row tm-mb-60 tm-gallery d-flex justify-content-center">
                     <div class="col-lg-8 col-md-8"> 
                     <figure class="effect-ming tm-video-item">
@@ -70,11 +62,15 @@ https://templatemo.com/tm-556-catalog-z
                     </div>
                 </div>
                 </p>
+
             </div>
             <h2 class="col-2 tm-text-primary"></h2>
         </div>
+
+
+
         <div class="text-center">
-            <a href="http://www.waterclean101.shop/" class="btn btn-primary">Retry</a>
+            <a href="index.html" class="btn btn-primary">Try again</a>
             <div class="row tm-mb-50"></div>
         </div>
         <!-- container-fluid, tm-container-content -->
@@ -107,10 +103,9 @@ https://templatemo.com/tm-556-catalog-z
                         <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>
                     </div>-->
                 </div>
-                <br><br><br>
                 <div class="row">
                     <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                        Copyright 2022 Yedam.
+                        Copyright 2020 Catalog-Z Company. All rights reserved.
                     </div>
                     <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
                         Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored"
@@ -120,7 +115,7 @@ https://templatemo.com/tm-556-catalog-z
             </div>
         </footer>
 
-        <script src="../static/js/plugins.js"></script>
+        <script src={{ url_for('static', filename='js/plugins.js') }}></script>
         <script>
             $(window).on("load", function () {
                 $('body').addClass('loaded');

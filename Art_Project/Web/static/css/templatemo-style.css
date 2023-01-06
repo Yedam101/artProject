@@ -214,9 +214,9 @@ a:hover { color:#666666; }
 .tm-mb-50 { margin-bottom: 50px; }
 .tm-mb-74 { margin-bottom: 74px; }
 .tm-mb-90 { margin-bottom: 90px; }
-.tm-text-primary { color: #009999; }
+.tm-text-primary { color: #666666; }
 .tm-text-secondary { color: #CC6699; }
-a.tm-text-primary:hover { color:#009999; }
+a.tm-text-primary:hover { color:#666666; }
 .tm-bg-gray { background-color: #EEEEEE; }
 .tm-input-paging {
     width: 40px;
@@ -492,11 +492,7 @@ figure.effect-ming:hover img { opacity: 0.4; }
 
 .tm-video-details {
     height: 100%;
-    padding-right: 60px;
-    padding-left: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+    padding: 40px;
 }
 
 /* About */
